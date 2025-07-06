@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Welcome Message Modal -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to the Carbon Footprint Calculator! 🌍</h2>
+            <p>Reduce your environmental impact by tracking your carbon footprint and making sustainable choices.</p>
+            <button onclick="closeWelcome()">OK</button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#index.html">Home</a></li>
+            <li><a href="#" onclick="showContainer()">Check Footprint</a></li>
+            <li><a href="https://news.climate.columbia.edu/2018/12/27/35-ways-reduce-carbon-footprint/">Reduce
+                    Footprint</a></li>
+        </ul>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
+    </nav>
+
+    <!-- Carbon Footprint Calculator Container -->
+    <div class="container" id="footprintContainer">
+        <button class="close-btn" onclick="hideContainer()">❌</button>
+        <h1>🌍 Carbon Footprint Calculator</h1>
+        <p>Enter your estimated usage to calculate your carbon footprint.</p>
+
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" placeholder="Your name here">
+
+        <label for="travel">🚗 Travel (km per week):</label>
+        <input type="number" id="travel" placeholder="e.g. 50">
+
+        <label for="energy">⚡ Energy Use (kWh per month):</label>
+        <input type="number" id="energy" placeholder="e.g. 200">
+
+        <label for="waste">🗑 Waste (kg per month):</label>
+        <input type="number" id="waste" placeholder="e.g. 20">
+
+        <label for="consumption">🛒 Personal Consumption ($ spent on non-essentials):</label>
+        <input type="number" id="consumption" placeholder="e.g. 30">
+
+        <button onclick="calculateFootprint()">Calculate</button>
+
+        <h2>Total CO₂ Emissions: <span id="result">0</span> kg/month</h2>
+
+        <div id="recommendations"></div>
+
+        <button id="factButton" onclick="showFact()">Did You Know?</button>
+        <p id="factDisplay"></p>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="leaderboard">
+        <h2>Leaderboard 🏆</h2>
+        <ul id="leaderboardList"></ul>
+
+        <!-- Clear Leaderboard Button -->
+        <button onclick="clearLeaderboard()">Clear Leaderboard</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
