@@ -4,17 +4,19 @@ body {
     background: url('images/bg2.webp') no-repeat center center fixed;
     background-size: cover;
     color: white;
-    padding: 20px;
     margin: 0;
+    padding: 0;
+    /* ✅ Fix: remove default padding */
 }
 
 /* Navigation Bar */
 nav {
-    background: rgba(0, 0, 0, 0.8);
+    background:grey;
     padding: 10px;
     position: fixed;
-    top: 0;
+    top:0;
     width: 100%;
+    
     display: flex;
     justify-content: center;
     z-index: 1000;
@@ -48,7 +50,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     width: 60%;
-    margin: 50px auto;
+    margin: 100px auto 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     animation: slideIn 0.5s ease-in-out;
     position: relative;
